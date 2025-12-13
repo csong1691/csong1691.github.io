@@ -4,26 +4,56 @@
     <meta charset="UTF-8">
     <title>我的女優作品集</title>
     </head>
+<style>
+/* 1. 設定外層容器 (actress-list) 使用 Flexbox */
+.actress-list {
+    display: flex;         /* 關鍵指令：將子元素橫向排列 */
+    flex-wrap: wrap;       /* 允許子元素在空間不足時自動換行 */
+    gap: 30px;             /* 設定卡片之間的水平和垂直間距 */
+}
+
+/* 2. 設置每個卡片 (actress-card) 的內部樣式 */
+.actress-card {
+    width: 200px;          /* 保持卡片寬度與圖片一致 */
+    text-align: center;    /* 讓圖片和文字在卡片中居中 */
+}
+
+/* 3. 調整連結的樣式，使其看起來更像卡片 */
+.actress-card a {
+    display: block;        /* 讓連結填滿整個卡片區域 */
+    text-decoration: none; /* 移除連結的底線 */
+    color: #333;           /* 設置文字顏色為深灰色（可自訂） */
+}
+
+/* 4. 確保圖片居中（雖然 text-align: center 通常足夠，但這更保險） */
+.actress-card img {
+    display: block;
+    margin: 0 auto 5px auto; /* 讓圖片上下居中，底部留 5px 空間 */
+}
+</style>
 <body>
     <h1>歡迎来到作品集</h1>
 
-    <div class="actress-card">
-        <a href="SatsukiFumino.html">
-            <img src="images/Satsukifumino.jpg" alt="沙月ふみの" style="width:200px; height:auto;">
-            <h2>沙月ふみの</h2>
-        </a>
-    </div>
+<div class="actress-list">
 
-    <div class="actress-card">
-        <a href="MukaiAi.html">
-            <img src="images/Mukaiai.jpg" alt="向井藍" style="width:200px; height:auto;">
-            <h2>向井藍</h2>
-        </a>
-    </div>
+        <div class="actress-card">
+            <a href="SatsukiFumino.html">
+                <img src="images/Satsukifumino.jpg" alt="沙月ふみの" style="width:200px; height:auto;">
+                <h2>沙月ふみの</h2>
+            </a>
+        </div>
 
+        <div class="actress-card">
+            <a href="MukaiAi.html">
+                <img src="images/Mukaiai.jpg" alt="向井藍" style="width:200px; height:auto;">
+                <h2>向井藍</h2>
+            </a>
+        </div>
+
+    </div>
     </body>
-
 </html>
+
 
 
 
