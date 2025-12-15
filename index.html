@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>女優作品收藏站 - 主頁</title>
+<style>
+/* ========================================= */
+/* I. 主頁 (index.html) 的樣式 - 左右分欄 */
+/* ========================================= */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Flexbox 容器：實現左右並排 */
+.main-entrance {
+    display: flex;             
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+/* 入口卡片的樣式 */
+.entrance-card {
+    flex: 1; 
+    max-width: 450px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+/* 入口卡片內圖片樣式 */
+.entrance-img {
+    max-width: 100%;
+    width: 280px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 4px;
+}
+
+/* ... (其他 index.html 相關樣式，例如 a, h2, hover 等) ... */
+
+
+/* ========================================= */
+/* II. 列表頁 (av-list.html) 的通用樣式 */
+/* 這些樣式雖然用在 index.html 中無效，但可以保留備用 */
+/* ========================================= */
+
+/* 1. Flexbox 容器：實現橫向排列 */
+.actress-list {
+    display: flex;         
+    flex-wrap: wrap;       
+    gap: 30px;             
+}
+
+/* 2. 設置每個卡片 (actress-card) 的內部樣式 */
+.actress-card {
+    width: 200px;         
+    text-align: center;   
+}
+
+/* 3. 調整連結的樣式 */
+.actress-card a {
+    display: block;     
+    text-decoration: none;
+    color: #333;           
+}
+
+/* 4. 確保圖片居中 */
+.actress-card img {
+    display: block;
+    margin: 0 auto 5px auto;
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>作品收藏站入口</h1>
+    </header>
+
+<main class="main-entrance">
+        
+        <div class="entrance-card actress-entrance">
+            <a href="av-list.html">
+                <img src="video/Yatsugakeumi.jpg" alt="女優入口圖片" class="entrance-img">
+                <h2>?? 女優列表 (Actress)</h2>
+                <p>依女優姓名查看所有收藏作品</p>
+            </a>
+        </div>
+
+        <div class="entrance-card series-entrance">
+            <a href="series.html">
+                <img src="video/NSFS-083.jpg" alt="系列入口圖片" class="entrance-img">
+                <h2>?? 系列作品 (Series)</h2>
+                <p>依系列主題、片商分類查看作品</p>
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>歡迎瀏覽您的收藏。</p>
+    </footer>
+
+</body>
+</html>
